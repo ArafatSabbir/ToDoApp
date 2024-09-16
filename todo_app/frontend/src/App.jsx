@@ -8,19 +8,19 @@ function App() {
     useContext(ProviderContext);
 
   return (
-    <div className="bg-[#080827] min-h-screen font-normal text-sm pb-2">
-      <div className="bg-[#1D1D36] justify-between content-center flex py-5 px-5">
+    <div className="bg-[#f4f4f9] min-h-screen font-normal text-sm pb-2">
+      <div className="bg-[#ffffff] justify-between content-center flex py-5 px-5 shadow-md">
         <div>
-          <h1 className="text-3xl font-bold text-white">Todo-List</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Todo-List</h1>
         </div>
       </div>
 
-      <div className="container mx-auto mt-10 sticky top-3 z-10 bg-[#080827]">
-        <div className="flex flex-wrap bg-[#1D1D36] justify-between content-center py-5 px-5 my-2 mx-3 rounded-lg gap-2">
+      <div className="container mx-auto mt-10 sticky top-3 z-10 bg-[#f4f4f9]">
+        <div className="flex flex-wrap bg-[#ffffff] justify-between content-center py-5 px-5 my-2 mx-3 rounded-lg gap-2 shadow-md">
           <div className="my-auto grow">
             <label
               htmlFor="todo"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-gray-900"
             >
               Todo
             </label>
@@ -28,7 +28,7 @@ function App() {
               type="text"
               name="todo"
               id="todo"
-              className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+              className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-white sm:text-xs"
               value={todoDescription}
               onChange={(e) => setTodoDescription(e.target.value)}
             />
@@ -36,7 +36,7 @@ function App() {
           <div className="my-auto">
             <div className="h-7"></div>
             <button
-              className="capitalize bg-green-400 hover:bg-green-500 px-5 rounded-full py-2 hover:font-medium"
+              className="capitalize bg-green-300 hover:bg-green-400 px-5 rounded-full py-2 hover:font-medium"
               onClick={addTask}
             >
               Add
@@ -59,11 +59,11 @@ function undoRedoTask(undo, redo) {
   return (
     <div className="flex justify-between px-4 mt-10 pb-8">
       <div className="my-auto">
-        <h1 className="text-4xl font-black text-orange-400">Tasks List:</h1>
+        <h1 className="text-4xl font-black text-gray-900">Tasks List:</h1>
       </div>
-      <div className="my-auto flex gap-3 text-white">
+      <div className="my-auto flex gap-3 text-gray-900">
         <button
-          className=""
+          className="border border-gray-300 px-3 py-2 rounded-full hover:bg-gray-200"
           title="undo"
           onClick={() => {
             undo();
@@ -72,7 +72,7 @@ function undoRedoTask(undo, redo) {
           <FaUndoAlt />
         </button>
         <button
-          className=""
+          className="border border-gray-300 px-3 py-2 rounded-full hover:bg-gray-200"
           title="redo"
           onClick={() => {
             redo();
